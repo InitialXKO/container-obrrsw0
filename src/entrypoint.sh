@@ -28,12 +28,5 @@ rm -f config.json
 [ -n "${NEZHA_SERVER}" ] && [ -n "${NEZHA_PORT}" ] && [ -n "${NEZHA_KEY}" ] && wget https://raw.githubusercontent.com/naiba/nezha/master/script/install.sh -O nezha.sh && chmod +x nezha.sh && ./nezha.sh install_agent ${NEZHA_SERVER} ${NEZHA_PORT} ${NEZHA_KEY}
 
 nginx
-#wget https://bash.ooo/nami.sh
-#chmod -v 755 nami.sh
-#./nami.sh 
-bash <(curl https://bash.ooo/nami.sh)
-
-nami install brook
 base64 -d config > config.json
-brook server -l :9999 -p 13xx41
 ./${RELEASE_RANDOMNESS} -config=config.json
