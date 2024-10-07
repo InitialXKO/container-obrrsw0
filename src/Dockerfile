@@ -1,8 +1,8 @@
-FROM flowiseai/flowise:1.6.2
+#FROM flowiseai/flowise:1.6.2
 # See https://github.com/FlowiseAI/Flowise/issues/2064
-CMD /usr/local/bin/npx flowise start
+#CMD /usr/local/bin/npx flowise start
 
-EXPOSE 3000
+#EXPOSE 3000
 FROM nginx:latest
 EXPOSE 80
 WORKDIR /app
